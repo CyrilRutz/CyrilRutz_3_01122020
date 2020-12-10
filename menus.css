@@ -6197,7 +6197,6 @@ section {
   border-radius: 2rem 2rem 0 0;
   background-color: #f2f2f2;
   width: 100%;
-  background-color: red;
 }
 
 section h1 {
@@ -6241,8 +6240,10 @@ form li {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  height: 3.8rem;
   max-width: 100%;
-  margin: 0.1rem 0 1rem 0;
+  margin: 0.1rem 0 1rem 0rem;
+  padding-left: 0.6rem;
   border-radius: 1rem;
   background-color: #fff;
   -webkit-box-shadow: 0 0 0.5rem 0.3rem #e5e5e5;
@@ -6299,7 +6300,7 @@ form li label:first-of-type {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 0.1px;
   height: 100%;
   border-radius: 1rem;
   -webkit-box-flex: 1;
@@ -6327,8 +6328,7 @@ form li label:last-of-type:before {
 
 form .dish {
   padding-top: 0.4rem;
-  padding-left: 0.6rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -6336,8 +6336,8 @@ form .dish {
 }
 
 form .sidedish {
-  padding-left: 0.6rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  padding-left: 0.01rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -6348,7 +6348,7 @@ form .sidedish {
 
 form .price {
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   padding-right: 1rem;
   -ms-flex-item-align: end;
       align-self: flex-end;

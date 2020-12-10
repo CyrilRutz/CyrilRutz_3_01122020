@@ -1,7 +1,7 @@
-@import"scss/var.scss";
-@import"scss/mixins.scss";
 @import"fontawesome-free-5.15.1-web/scss/fontawesome.scss";
 @import"fontawesome-free-5.15.1-web/scss/solid.scss";
+@import"scss/var.scss";
+@import"scss/mixins.scss";
 
 :root
 {
@@ -58,7 +58,6 @@ section
     border-radius: 2rem 2rem 0 0;
     background-color: #f2f2f2;
     width:100%;
-    background-color: red;
 }
 section h1
 {
@@ -93,8 +92,10 @@ form
     {
     display: flex;
     list-style-type: none;
+    height:3.8rem;
     max-width: 100%;
-    margin:0.1rem 0 1rem 0;
+    margin:0.1rem 0 1rem 0rem;
+    padding-left: 0.6rem;
     border-radius: 1rem;
     background-color: #fff;
     @include shadow;
@@ -144,7 +145,7 @@ li label:first-of-type
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    width: 0.1px;
     height: 100%;
     border-radius: 1rem;
     flex:1;
@@ -174,8 +175,7 @@ li label:last-of-type
 .dish
 {
     padding-top: 0.4rem;
-    padding-left: 0.6rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -183,8 +183,8 @@ li label:last-of-type
 }
 .sidedish
 {
-    padding-left:0.6rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding-left: 0.01rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -193,7 +193,7 @@ li label:last-of-type
 .price
 {
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding-right: 1rem;
     align-self: flex-end;
 }
