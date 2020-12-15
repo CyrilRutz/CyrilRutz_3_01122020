@@ -1,3 +1,18 @@
 $primary-color:#9356dc;
 $secondary-color:#ff79da;
 $tertiary-color:#99e2d0;
+
+%newrestaurant
+{
+    z-index: 1;
+    position:absolute;
+    content:"Nouveau";
+    background-color: $tertiary-color;
+    color:darken($tertiary-color, 40%);
+    font-size:0.8rem;
+    font-weight: bold;
+    padding:0.3rem 0.8rem;
+    right: 0.8rem;
+    border-radius: 0.1rem;
+    top:0.8rem;
+}

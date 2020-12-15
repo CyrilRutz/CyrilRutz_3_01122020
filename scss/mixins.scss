@@ -1,9 +1,10 @@
 @mixin footermix
 { 
     align-self: stretch;
-    background-color: black;
+    background-color: darken(grey , 30%);
     color: white;
     padding-top: 2rem;
+    padding-bottom:2rem;
     list-style-type:none;
     h1{
         font-family: "shrikhand";
@@ -33,10 +34,13 @@
 @mixin button{
     color:white;
     border:none;
-    width:50%;
+    min-width:50%;
+    padding: 0 1.5rem 0 1.5rem;
     height:3rem;
     border-radius:5rem 5rem;
 }
-@mixin likebutton{
-   @include bckggradient($primary-color,$secondary-color)
+@mixin likebutton
+{
+   @include bckggradient($primary-color,$secondary-color);
 }
+

@@ -11,14 +11,14 @@
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="icon" type="image/svg" href="images/logo/ohmyfood@2x.svg">
     <link rel="stylesheet" href="resetstylesheet.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/index.css">
 
 </head>
 
 <body>
     <header><a href="#"><img src="images/logo/ohmyfood.png" alt="Logo de l'entreprise" /></a></header>
-    <form>
-        <input type="text" placeholder="Paris Belleville" id="city">
+    <form action="controle.php" method="post">
+        <input type="text" placeholder="&#xf3c5 Paris Belleville" id="city">
         <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <button>Explorer nos restaurants</button>
@@ -34,22 +34,32 @@
     <section id="restaurants">
         <h2>Restaurants</h2>
         <a href="lapalettedugout.html">
-            <figure>
+            <figure class="newrestaurant">
                 <img src="images/restaurants/palettedugout.jpg" alt="La Palette du goût">
                 <figcaption>
-                    <h3>La Palette du goût</h3>
-                    <i class="far fa-heart"></i>
-                    <p>Ménilmontant</p>
+                    <input type="checkbox" id="restaurant1"  name="restaurant1"></input>
+                    <div class="description">
+                        <h3>La Palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <label for="restaurant1">
+                        <i class="far fa-heart"></i>
+                    </label>
                 </figcaption>
             </figure>
         </a>
         <a href="lanoteenchantee.html">
-            <figure>
+            <figure class="newrestaurant">
                 <img src="images/restaurants/noteenchantee.jpg" alt="La note enchantée">
                 <figcaption>
-                    <h3>La note enchantée</h3>
-                    <i class="far fa-heart"></i>
-                    <p>Charonne</p>
+                    <input type="checkbox" id="restaurant2"  name="restaurant2"></input>
+                    <div class="description">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <label for="restaurant2">
+                        <i class="far fa-heart"></i>
+                    </label>
                 </figcaption>
             </figure>
         </a>
@@ -57,9 +67,14 @@
             <figure>
                 <img src="images/restaurants/alafrancaise.jpg" alt="A la française">
                 <figcaption>
-                    <h3>A la française</h3>
-                    <i class="far fa-heart"></i>
-                    <p>Cité Rouge</p>
+                    <input type="checkbox" id="restaurant3"  name="restaurant3"></input>
+                    <div class="description">
+                        <h3>A la française</h3>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <label for="restaurant3">
+                        <i class="far fa-heart"></i>
+                    </label>
                 </figcaption>
             </figure>
         </a>
@@ -67,9 +82,14 @@
             <figure>
                 <img src="images/restaurants/delicedessens.jpg" alt="Le délice des sens">
                 <figcaption>
-                    <h3>Le délice des sens</h3>
-                    <i class="far fa-heart"></i>
-                    <p>Folie-Méricourt</p>
+                    <input type="checkbox" id="restaurant4"  name="restaurant4"></input>
+                    <div class="description">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <label for="restaurant4">
+                        <i class="far fa-heart"></i>
+                    </label>
                 </figcaption>
             </figure>
         </a>

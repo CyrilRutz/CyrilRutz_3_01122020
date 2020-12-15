@@ -26,8 +26,11 @@
         </figure>
         <section>
             <h1>La palette du goût</h1>
-            <i class="far fa-heart"></i>
-            <form>
+            <label id="favorite">
+                <input type="checkbox"  name="favorite"></input>
+                <i class="far fa-heart"></i>
+            </label>
+            <form action="controle.php" method="POST">
                 <fieldset>
                     <legend>ENTREES</legend>
                     <ul>
@@ -133,7 +136,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <input class="button" type="submit" value="Commander">
+                <input class="button" type="submit" value="Commander" name="submit">
             </form>
         </section>
 

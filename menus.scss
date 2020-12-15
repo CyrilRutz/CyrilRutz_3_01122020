@@ -15,7 +15,8 @@ body{
     align-items: center;
     
 }
-ul{
+ul
+{
     list-style-type: none;
 }
 header
@@ -23,9 +24,7 @@ header
     display: flex;
     justify-content: center;
     align-self: stretch;
-    
     height:4rem;
-    
     i
     {
     font-size: 1.3rem;
@@ -35,7 +34,12 @@ header
     img
     {
      margin:1.3rem auto auto;
-     width: 45%;
+     max-width:45%;
+    }
+    a, a:visited, a:hover 
+    {
+        text-decoration: none;
+        color:black;
     }
 }
 main
@@ -44,10 +48,17 @@ main
     flex-direction: column;
     justify-content: center;
 
-}
-main figure
-{
+    figure
+    {
+    height: 17rem;
     margin-bottom: -1.8rem;
+    }
+    img {
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+        object-position: top;
+    }
 }
 section
 {
@@ -58,22 +69,26 @@ section
     border-radius: 2rem 2rem 0 0;
     background-color: #f2f2f2;
     width:100%;
-}
-section h1
-{
+    h1
+    {
     font-family: "shrikhand";
     font-size:1.8rem;
     width:75%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    }
 }
-.section>i
+
+#favorite
 {
-    width:10%;
+    
     font-size: 1.6rem;
     align-self: center;
     margin-bottom: 1.5rem;
-    color: blue;
-    @include likebutton;
+    padding-right: 1rem;
+    input[type="checkbox"]
+    {
+        display:none;
+    }  
 }
 
 form
@@ -92,26 +107,30 @@ form
     {
     display: flex;
     list-style-type: none;
-    height:3.8rem;
+    height: auto;
     max-width: 100%;
-    margin:0.1rem 0 1rem 0rem;
+    margin:0.1rem 0 1.7rem 0rem;
     padding-left: 0.6rem;
     border-radius: 1rem;
     background-color: #fff;
     @include shadow;
-    /*&:hover label:last-of-type,
-        {
-            display: flex;
-        }
-    }*/
-}
-input[type=checkbox]
+    }
+    input[type=checkbox]
     {
-   display: none;
-   &:checked ~ label:last-of-type
-   {
+        display: none;
+    
+        &:checked ~ label:last-of-type
+        {
         display:flex;
-   }
+        }
+        &:checked ~ label .sidedish, &:checked ~ label .dish
+        {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+    }
 }
 fieldset
 {
@@ -126,7 +145,7 @@ fieldset:last-of-type
 legend
 {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1.1rem;
     border: none;
     &::before
@@ -148,67 +167,64 @@ li label:first-of-type
     width: 0.1px;
     height: 100%;
     border-radius: 1rem;
-    flex:1;
-    
+    flex:1;   
 }
 li label:last-of-type
 {
     display: none;
     width:3.8rem;
-    height:100%;
+    max-height:5rem;
     background-color: $tertiary-color;
     border-radius: 0 1rem 1rem 0;
     @extend %fa-icon;
     @extend .fas;
-    &:before{
+    &:before
+    {
         content: fa-content($fa-var-check);
         margin:auto;
         color: $tertiary-color;
         background-color: #f5f5f5;
+        max-height: 5rem;
         border-radius: 100%;
         padding: 0.2rem;
         font-size: 0.8rem;
     }
     
 }
-
 .dish
 {
     padding-top: 0.4rem;
-    font-size: 1.1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
+    font-size: 1.2rem; 
     width: 100%;
+       
 }
 .sidedish
 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding-left: 0.01rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    flex:1;  
+    flex:1;
+   
 }
 .price
 {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding-right: 1rem;
     align-self: flex-end;
 }
-.button{
+.button
+{
     
     @include shadow;
     @include bckggradient;
     @include button;
-    &:hover{
+    &:hover
+    {
     @include shadow(darken( #e5e5e5, 10%));
-    @include bckggradient(lighten($secondary-color, 5%), lighten($primary-color, 5%))
+    @include bckggradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
     }
 }
 footer
 {
-    @include footermix
-}
-}
+    @include footermix;
+}   
