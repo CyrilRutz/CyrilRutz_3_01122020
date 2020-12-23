@@ -1,0 +1,76 @@
+@media screen and (min-width:1023px)
+{
+    :root
+    {
+        font-size:16px;
+    }
+    html
+    {
+        
+        display: flex;
+        justify-content: center;
+    }
+    body
+    {
+        width: 100%;
+        max-width: 1366px;
+    }
+    header
+    {
+        height: auto;
+        padding-bottom:1rem;
+        align-items:center;
+    }
+    main
+    {
+        width: 100%;
+        margin-bottom:-1.8rem;
+        figure
+        {
+            height: 25rem;
+            width:100%;
+        }
+        img
+        {
+            object-position: center;
+            border-radius: 2rem 2rem 0 0;
+        }
+    }
+    section
+    {
+        padding-bottom:3rem;   
+    }
+    form
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:2rem;
+        padding:2rem;
+        width: 100%;
+        justify-content:center;
+        fieldset
+        {
+        display: flex;
+        flex-direction: row;
+        }
+        ul
+        {
+        width:100%;
+        }
+        li
+        {
+        flex-direction: row;
+        width:100%;
+        }
+
+        .button{
+            grid-column: 2;
+        }
+    }
+    footer
+    {
+        border-radius: 2rem 2rem 0 0;
+    }
+
+
+}

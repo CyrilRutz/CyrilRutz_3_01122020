@@ -1,0 +1,106 @@
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  html {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body {
+    width: 100%;
+    max-width: 1366px;
+    border-radius: 1rem;
+  }
+  header {
+    padding: 3rem;
+  }
+  header a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header img {
+    width: 100%;
+    margin: 1rem;
+  }
+  #localisation {
+    border-radius: 1rem 1rem 0 0;
+  }
+  #fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #fonctionnement h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  #fonctionnement ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  #fonctionnement ol li {
+    max-width: 30%;
+    margin: auto;
+    padding: 0.5rem;
+  }
+  #restaurants {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem 3rem 5rem;
+    margin-bottom: -1.8rem;
+    border-radius: 1rem;
+  }
+  #restaurants > * {
+    width: auto;
+  }
+  #restaurants h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  #restaurants a {
+    width: 45%;
+  }
+  #restaurants figure {
+    margin: 0;
+  }
+  footer {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+/*# sourceMappingURL=responsiveindex.css.map */

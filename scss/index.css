@@ -6208,26 +6208,33 @@ form {
   padding-bottom: 4rem;
 }
 
-input[type="text"] {
+#localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: 3rem;
+  border-top: 0.1rem solid grey;
   background-color: #e5e5e5;
+  height: 3rem;
 }
 
-input[type="text"] ::-webkit-input-placeholder {
-  text-align: center;
+#localisation i {
+  color: grey;
+  padding-right: 1rem;
 }
 
-input[type="text"] :-ms-input-placeholder {
-  text-align: center;
-}
-
-input[type="text"] ::-ms-input-placeholder {
-  text-align: center;
-}
-
-input[type="text"] ::placeholder {
-  text-align: center;
+input[type="text"] {
+  background-color: #e5e5e5;
+  color: grey;
+  border: none;
+  width: 8rem;
 }
 
 form h2 {
@@ -6249,10 +6256,9 @@ form p {
 button {
   color: white;
   border: none;
-  min-width: 50%;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1.5rem;
   height: 3rem;
-  border-radius: 5rem 5rem;
+  border-radius: 5rem;
   -webkit-box-shadow: 0 0 0.5rem 0.3rem #e5e5e5;
           box-shadow: 0 0 0.5rem 0.3rem #e5e5e5;
   background: linear-gradient(172deg, #ff79da 21%, #9356dc 79%);
@@ -6296,11 +6302,11 @@ button:hover {
           box-shadow: 0 0 0.5rem 0.3rem #e5e5e5;
 }
 
-#fonctionnement ol li:hover {
+#fonctionnement ol li:last-of-type {
   background-color: #f2eafb;
 }
 
-#fonctionnement ol li:hover i {
+#fonctionnement ol li:last-of-type i {
   color: #9356dc;
 }
 
@@ -6318,7 +6324,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: -0.8rem;
+  left: -0.8rem;
   content: counter(count);
   background-color: #9356dc;
   border-radius: 50%;
@@ -6338,6 +6344,7 @@ input[type="checkbox"]:checked ~ label::before {
   content: "\f004";
   margin: auto;
   background: linear-gradient(172deg, #9356dc 21%, #ff79da 79%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 1.5rem;
@@ -6415,25 +6422,17 @@ footer {
       align-self: stretch;
   background-color: #343434;
   color: white;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  list-style-type: none;
+  padding: 2rem 0 2rem 3rem;
 }
 
 footer h1 {
   font-family: "shrikhand";
   font-size: 1rem;
-  padding-left: 2.2rem;
+  margin-left: -1.5rem;
 }
 
 footer ul {
-  margin-left: 0;
-  padding-left: 1.5rem;
-}
-
-footer li {
-  list-style-type: none;
-  margin-left: 0;
+  margin: 0;
 }
 
 footer a, footer a:visited, footer a:hover {

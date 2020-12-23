@@ -3,21 +3,14 @@
     align-self: stretch;
     background-color: darken(grey , 30%);
     color: white;
-    padding-top: 2rem;
-    padding-bottom:2rem;
-    list-style-type:none;
+    padding: 2rem 0 2rem 3rem;
     h1{
         font-family: "shrikhand";
         font-size: 1rem;
-        padding-left: 2.2rem;
+        margin-left:-1.5rem;
     }
     ul{
-    margin-left: 0;
-    padding-left: 1.5rem;
-    }
-    li{
-    list-style-type: none;
-    margin-left:0;
+        margin:0;
     }
     a, a:visited, a:hover 
     {
@@ -34,10 +27,9 @@
 @mixin button{
     color:white;
     border:none;
-    min-width:50%;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.5rem;
     height:3rem;
-    border-radius:5rem 5rem;
+    border-radius:5rem;
 }
 @mixin likebutton
 {

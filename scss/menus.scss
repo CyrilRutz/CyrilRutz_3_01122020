@@ -1,7 +1,7 @@
-@import"fontawesome-free-5.15.1-web/scss/fontawesome.scss";
-@import"fontawesome-free-5.15.1-web/scss/solid.scss";
-@import"scss/var.scss";
-@import"scss/mixins.scss";
+@import "../fontawesome-free-5.15.1-web/scss/fontawesome.scss";
+@import "../fontawesome-free-5.15.1-web/scss/solid.scss";
+@import "var.scss";
+@import "mixins.scss";
 
 :root
 {
@@ -115,21 +115,23 @@ form
     background-color: #fff;
     @include shadow;
     }
-    input[type=checkbox]
+}
+input[type=checkbox]
+{
+    display: none;
+    &:checked ~ label:last-of-type
     {
-        display: none;
-    
-        &:checked ~ label:last-of-type
-        {
+        width:3.8rem;
+    }
+    &:checked ~ label:last-of-type::before
+    {
         display:flex;
-        }
-        &:checked ~ label .sidedish, &:checked ~ label .dish
-        {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
+    }
+    &:checked ~ label .sidedish, &:checked ~ label .dish
+    {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 fieldset
@@ -167,19 +169,23 @@ li label:first-of-type
     width: 0.1px;
     height: 100%;
     border-radius: 1rem;
-    flex:1;   
+    flex:1;
 }
 li label:last-of-type
 {
-    display: none;
-    width:3.8rem;
+    display: flex;
     max-height:5rem;
+    transition-property: width;
+    transition-duration:2s;
+    
+    width: 0;
     background-color: $tertiary-color;
     border-radius: 0 1rem 1rem 0;
     @extend %fa-icon;
     @extend .fas;
     &:before
     {
+        display:none;
         content: fa-content($fa-var-check);
         margin:auto;
         color: $tertiary-color;

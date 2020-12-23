@@ -6267,17 +6267,21 @@ form li {
           box-shadow: 0 0 0.5rem 0.3rem #e5e5e5;
 }
 
-form input[type=checkbox] {
+input[type=checkbox] {
   display: none;
 }
 
-form input[type=checkbox]:checked ~ label:last-of-type {
+input[type=checkbox]:checked ~ label:last-of-type {
+  width: 3.8rem;
+}
+
+input[type=checkbox]:checked ~ label:last-of-type::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-form input[type=checkbox]:checked ~ label .sidedish, form input[type=checkbox]:checked ~ label .dish {
+input[type=checkbox]:checked ~ label .sidedish, input[type=checkbox]:checked ~ label .dish {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -6327,14 +6331,21 @@ li label:first-of-type {
 }
 
 li label:last-of-type {
-  display: none;
-  width: 3.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-height: 5rem;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  width: 0;
   background-color: #99e2d0;
   border-radius: 0 1rem 1rem 0;
 }
 
 li label:last-of-type:before {
+  display: none;
   content: "\f00c";
   margin: auto;
   color: #99e2d0;
@@ -6373,10 +6384,9 @@ li label:last-of-type:before {
   background: linear-gradient(172deg, #ff79da 21%, #9356dc 79%);
   color: white;
   border: none;
-  min-width: 50%;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1.5rem;
   height: 3rem;
-  border-radius: 5rem 5rem;
+  border-radius: 5rem;
 }
 
 .button:hover {
@@ -6391,25 +6401,17 @@ footer {
       align-self: stretch;
   background-color: #343434;
   color: white;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  list-style-type: none;
+  padding: 2rem 0 2rem 3rem;
 }
 
 footer h1 {
   font-family: "shrikhand";
   font-size: 1rem;
-  padding-left: 2.2rem;
+  margin-left: -1.5rem;
 }
 
 footer ul {
-  margin-left: 0;
-  padding-left: 1.5rem;
-}
-
-footer li {
-  list-style-type: none;
-  margin-left: 0;
+  margin: 0;
 }
 
 footer a, footer a:visited, footer a:hover {

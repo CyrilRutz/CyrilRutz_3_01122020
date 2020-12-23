@@ -12,13 +12,16 @@
     <link rel="icon" type="image/svg" href="images/logo/ohmyfood@2x.svg">
     <link rel="stylesheet" href="resetstylesheet.css">
     <link rel="stylesheet" href="scss/index.css">
-
+    <link rel="stylesheet" href="scss/responsiveindex.css">
 </head>
 
 <body>
     <header><a href="#"><img src="images/logo/ohmyfood.png" alt="Logo de l'entreprise" /></a></header>
     <form action="controle.php" method="post">
-        <input type="text" placeholder="&#xf3c5 Paris Belleville" id="city">
+        <div id="localisation">
+                <i class="fas fa-map-marker-alt"></i>            
+                <input type="text" placeholder="Paris, Belleville" id="city">
+        </div>
         <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <button>Explorer nos restaurants</button>
@@ -96,9 +99,9 @@
     </section>
     <footer>
         <h1>Ohmyfood</h1>
-        <ul>
-            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+        <ul class="fa-ul">
+            <li><a href="#"><span class="fa-li"><i class="fas fa-utensils"></i></span>Proposer un restaurant</a></li>
+            <li><a href="#"><span class="fa-li"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
