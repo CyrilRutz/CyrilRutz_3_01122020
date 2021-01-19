@@ -6262,7 +6262,7 @@ body::before {
           align-items: center;
   height: 200%;
   width: 200%;
-  top: -50%;
+  top: -85%;
   left: -50%;
   -webkit-animation: bckg 2s;
           animation: bckg 2s;

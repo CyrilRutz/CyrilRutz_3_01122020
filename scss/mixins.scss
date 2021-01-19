@@ -75,14 +75,14 @@
         &::before
         {
             content:"";
-            background:url(/images/logo/ohmyfood@2x.svg);
+            background:url(images/logo/ohmyfood@2x.svg);
             transform: rotate(35deg);
             overflow: hidden;
             justify-content: center;
             align-items:center;
             height:200%;
             width:200%;
-            top:-50%;
+            top:-85%;
             left:-50%;
             animation: bckg 2s;
             animation-fill-mode: forwards;
