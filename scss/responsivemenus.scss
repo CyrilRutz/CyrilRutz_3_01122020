@@ -44,10 +44,10 @@
     {
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        justify-items: center;
         gap:2rem;
         padding:2rem;
         width: 100%;
-        justify-content:center;
         fieldset
         {
         display: flex;

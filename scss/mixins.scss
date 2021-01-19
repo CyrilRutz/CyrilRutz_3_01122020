@@ -24,6 +24,9 @@
 @mixin bckggradient ($color1:$secondary-color, $color2:$primary-color) {
     background: linear-gradient(172deg, $color1 21%, $color2 79%);
 }
+@mixin bordergradiant ($color1:$secondary-color, $color2:$primary-color) {
+    border-image: linear-gradient(172deg, $color1 21%, $color2 79%);
+}
 @mixin button{
     color:white;
     border:none;
@@ -31,8 +34,76 @@
     height:3rem;
     border-radius:5rem;
 }
-@mixin likebutton
+@mixin loader
 {
-   @include bckggradient($primary-color,$secondary-color);
-}
+    position:relative;
+    @keyframes bar{
+        0%{
+                transform: scaleX(0);
+                width: 50vw;
+                height:1rem;
+                  
+            }
+            99%{
+                width: 50vw;
+                height:1rem;
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(0);
+                width: 0;
+                height:0;
+            }
+        }
+    @keyframes bckg{
+        0%
+        {
+            height:200%;
+            width:200%;
 
+        }
+        99%{
+            height:200%;
+            width:200%;
+
+        }
+        100%{
+            height:0;
+            width:0;
+        }
+    }
+        &::before
+        {
+            content:"";
+            background:url(/images/logo/ohmyfood@2x.svg);
+            transform: rotate(35deg);
+            overflow: hidden;
+            justify-content: center;
+            align-items:center;
+            height:200%;
+            width:200%;
+            top:-50%;
+            left:-50%;
+            animation: bckg 2s;
+            animation-fill-mode: forwards;
+            position: absolute;
+            background-color: #f5f5f5;
+            opacity: 0.8;
+            z-index:2;
+        }
+        &::after
+        {
+            content:"";
+            position: absolute;
+            top:calc(100vh / 2 - 1rem);
+            border-radius:1rem;
+            width: 50vw;
+            height:1rem;
+            z-index:3;
+            animation: bar 2s;
+            animation-fill-mode: forwards;
+            transform-origin: left;
+            @include bckggradient($primary-color,$secondary-color);
+            
+    }
+}

@@ -2,7 +2,7 @@
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, #restaurants label,
+.fa, input[type="checkbox"] ~ label,
 .fas,
 .far,
 .fal,
@@ -17,7 +17,7 @@
   line-height: 1;
 }
 
-#restaurants label {
+input[type="checkbox"] ~ label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -118,7 +118,7 @@
   float: right;
 }
 
-.fa.fa-pull-left, #restaurants label.fa-pull-left,
+.fa.fa-pull-left, input[type="checkbox"] ~ label.fa-pull-left,
 .fas.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -126,7 +126,7 @@
   margin-right: .3em;
 }
 
-.fa.fa-pull-right, #restaurants label.fa-pull-right,
+.fa.fa-pull-right, input[type="checkbox"] ~ label.fa-pull-right,
 .fas.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -6112,7 +6112,7 @@ readers do not read off random characters that represent icons */
   src: url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.woff2") format("woff2"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.woff") format("woff"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.ttf") format("truetype"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
-.fa, #restaurants label,
+.fa, input[type="checkbox"] ~ label,
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -6172,6 +6172,123 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9;
+  position: relative;
+}
+
+@-webkit-keyframes bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 50vw;
+    height: 1rem;
+  }
+  99% {
+    width: 50vw;
+    height: 1rem;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 50vw;
+    height: 1rem;
+  }
+  99% {
+    width: 50vw;
+    height: 1rem;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0;
+    height: 0;
+  }
+}
+
+@-webkit-keyframes bckg {
+  0% {
+    height: 200%;
+    width: 200%;
+  }
+  99% {
+    height: 200%;
+    width: 200%;
+  }
+  100% {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes bckg {
+  0% {
+    height: 200%;
+    width: 200%;
+  }
+  99% {
+    height: 200%;
+    width: 200%;
+  }
+  100% {
+    height: 0;
+    width: 0;
+  }
+}
+
+body::before {
+  content: "";
+  background: url(/images/logo/ohmyfood@2x.svg);
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: bckg 2s;
+          animation: bckg 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  background-color: #f5f5f5;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: calc(100vh / 2 - 1rem);
+  border-radius: 1rem;
+  width: 50vw;
+  height: 1rem;
+  z-index: 3;
+  -webkit-animation: bar 2s;
+          animation: bar 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background: linear-gradient(172deg, #9356dc 21%, #ff79da 79%);
 }
 
 header {
@@ -6332,24 +6449,6 @@ button:hover {
   color: white;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"]:checked ~ label::before {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  content: "\f004";
-  margin: auto;
-  background: linear-gradient(172deg, #9356dc 21%, #ff79da 79%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 1.5rem;
-}
-
 #restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6390,13 +6489,13 @@ input[type="checkbox"]:checked ~ label::before {
 }
 
 #restaurants figcaption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #restaurants .description {
@@ -6404,7 +6503,11 @@ input[type="checkbox"]:checked ~ label::before {
   margin-left: 0.8rem;
 }
 
-#restaurants label {
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] ~ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6414,6 +6517,45 @@ input[type="checkbox"]:checked ~ label::before {
           align-items: center;
   margin-right: 1.5rem;
   font-size: 1.5rem;
+  padding: 0.1rem;
+  z-index: 12;
+  -webkit-transition: color 50ms;
+  transition: color 50ms;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+input[type="checkbox"] ~ label::before {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  content: "\f004";
+  background: linear-gradient(172deg, #9356dc 21%, #ff79da 79%);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+  content: "\f004";
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+input[type="checkbox"]:checked ~ label {
+  color: transparent;
 }
 
 footer {
