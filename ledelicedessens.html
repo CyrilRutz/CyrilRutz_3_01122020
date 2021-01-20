@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="icon" type="image/svg" href="images/logo/ohmyfood@2x.svg">
+    <link rel="stylesheet" href="resetstylesheet.css">
+    <link rel="stylesheet" href="scss/menus.css">
+    <link rel="stylesheet" href="scss/responsivemenus.css">
+
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <img src="images/logo/ohmyfood.png" alt="Logo de l'entreprise">
+    </header>
+    <main>
+        <figure>
+            <img src="images/restaurants/delicedessens.jpg" alt="Le délice des sens">
+        </figure>
+        <section>
+            <h1>Le délice des sens</h1>
+            <label id="favorite">
+                <input type="checkbox"  name="favorite"></input>
+                <i class="far fa-heart"></i>
+            </label>
+            <form>
+                <fieldset>
+                    <legend>ENTREES</legend>
+                    <ul>
+                        <li>
+                            <input id="ent-dish1" type="checkbox" name="entrance">
+                            <label for="ent-dish1">
+                                <span class="dish">Tartare de thon</span>
+                                <span class="sidedish">Assaisonné au yuzu</span>
+                                <span class="price">25€</span>
+                            </label>
+                            <label class="check" for="ent-dish1">
+                            </label>
+                        </li>
+                        <li>
+                            <input id="ent-dish2" type="checkbox" name="entrance">
+                            <label for="ent-dish2">
+                                <span class="dish">Bouchée de homard croustillant </span>
+                                <span class="sidedish">Et sa farandole de petits légumes</span>
+                                <span class="price">35€</span>
+                            </label>
+                            <label class="check" for="ent-dish2">
+                            </label>
+                        </li>
+                        <li>
+                            <input id="ent-dish3" type="checkbox" name="entrance">
+                            <label for="ent-dish3">
+                                <span class="dish">Velouté de cèpes</span>      
+                                <span class="sidedish">Aux truffes</span>
+                                <span class="price">20€</span>
+                            </label>
+                            <label class="check" for="ent-dish3">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>PLATS</legend>
+                    <ul>
+                        <li>
+                            <input id="mai-dish1" type="checkbox" name="maindish">
+                            <label for="mai-dish1">
+                                <span class="dish">Poulet rôti aux herbes de Provence </span>
+                                <span class="sidedish">Et sa crème de truffe</span>
+                                <span class="price">40€</span>
+                            </label>
+                            <label class="check" for="mai-dish1">
+                            </label>
+                        </li>
+                        <li>
+                            <input id="mai-dish2" type="checkbox" name="maindish">
+                            <label for="mai-dish2">
+                                <span class="dish">Langouste rôtie</span>
+                                <span class="sidedish">Et ses légumes de saison</span>
+                                <span class="price">35€</span>
+                            </label>
+                            <label class="check" for="mai-dish2">
+                            </label>
+                        </li>
+                        <li>
+                            <input id="mai-dish3" type="checkbox" name="maindish">
+                            <label for="mai-dish3">
+                                <span class="dish">Côte de boeuf Angus </span>
+                                <span class="sidedish">Et sa purée de panais</span>
+                                <span class="price">44€</span>
+                            </label>
+                            <label class="check" for="mai-dish3">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>DESSERTS</legend>
+                    <ul>
+                        <li>
+                            <input id="des-dish1" type="checkbox" name="dessert">
+                            <label for="des-dish1">
+                                <span class="dish">Farandole de desserts</span>
+                                <span class="sidedish">Du chef</span>
+                                <span class="price">18€</span>
+                            </label>
+                            <label class="check" for="des-dish1">
+                            </label>                            
+                        </li>
+                        <li>
+                            <input id="des-dish2" type="checkbox" name="dessert">
+                            <label for="des-dish2">
+                                <span class="dish">Crème brulée</span>
+                                <span class="sidedish">Revisitée</span>
+                                <span class="price">22€</span>
+                            </label>
+                            <label class="check" for="des-dish2">
+                            </label>
+                        </li>
+                        <li>
+                            <input id="des-dish3" type="checkbox" name="dessert">
+                            <label for="des-dish3">
+                                <span class="dish">Tiramisu</span>
+                                <span class="sidedish">À la noisette</span>
+                                <span class="price">23€</span>
+                            </label>
+                            <label class="check" for="des-dish3">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <input class="button" type="submit" value="Commander">
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <h1>Ohmyfood</h1>
+        <ul class="fa-ul">
+            <li><a href="#"><span class="fa-li"><i class="fas fa-utensils"></i></span>Proposer un restaurant</a></li>
+            <li><a href="#"><span class="fa-li"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

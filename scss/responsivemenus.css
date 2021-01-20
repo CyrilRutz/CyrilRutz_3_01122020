@@ -1,0 +1,77 @@
+@media screen and (min-width: 1023px) {
+  :root {
+    font-size: 16px;
+  }
+  html {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body {
+    width: 100%;
+    max-width: 1366px;
+  }
+  header {
+    height: auto;
+    padding-bottom: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    width: 100%;
+    margin-bottom: -1.8rem;
+  }
+  main figure {
+    height: 25rem;
+    width: 100%;
+  }
+  main img {
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 2rem 2rem 0 0;
+  }
+  section {
+    padding-bottom: 3rem;
+  }
+  form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+  }
+  form fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  form ul {
+    width: 100%;
+  }
+  form li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  form .button {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  footer {
+    border-radius: 2rem 2rem 0 0;
+  }
+}
+/*# sourceMappingURL=responsivemenus.css.map */

@@ -1,0 +1,154 @@
+:root
+{
+    font-size: calc(1vw/0.2375);
+}
+body{
+    font-family: "roboto";
+    font-size: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    height:4rem;
+}
+header i
+{
+    position: absolute;
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+}
+header img
+{
+   margin:1.3rem auto auto;
+   width: 45%;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+section
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+section h1
+{
+    font-family: "shrikhand";
+    font-size:1.8rem;
+    width:75%;
+    margin-bottom: 1.5rem;
+}
+section>i
+{
+    width:10%;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-bottom: 1.5rem;;
+
+}
+section>*
+{
+    width:93%;
+}
+form
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    width:100%
+}
+form li{
+    display: flex;
+}
+.check
+{
+    display: none;
+}
+fieldset
+{
+    border: none;
+    padding:none;
+    width: 100%;
+}
+legend
+{
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+
+}
+legend::before
+{
+    content:'';
+    position: absolute;;
+    width:2.6rem;
+    height: 100%;
+    border-bottom: 3px solid black;
+    padding-bottom:1.9rem;
+}
+section ul{
+    margin:0 0 1.6rem 0;
+    padding-left: 0;
+}
+section li{
+    list-style-type: none;
+    width: 100%;
+}
+label
+{
+    display: flex;
+    flex-wrap: wrap;
+    height:4.1rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom:1rem;
+    border: solid 1px black;
+}
+.dish
+{
+    padding-top: 0.4rem;
+    padding-left: 0.6rem;
+    font-size: 1.1rem;
+    width: 100%;
+}
+.sidedish
+{
+    padding-left:0.6rem;
+    font-size: 0.9rem;
+   
+}
+.price
+{
+    font-weight: bold;
+    padding-right: 1rem;
+}
+footer
+{
+    
+    align-self: stretch;
+    background-color: black;
+    color: white;
+    margin-top:4rem;
+    list-style-type:none ;
+}
+footer h1{
+    font-family: "shrikhand";
+}
+footer ul{
+    margin-left: 0;
+}
+footer li{
+    list-style-type: none;
+    margin-left:0;
+}

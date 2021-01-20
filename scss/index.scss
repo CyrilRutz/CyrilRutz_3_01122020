@@ -1,0 +1,245 @@
+@import"../fontawesome-free-5.15.1-web/scss/fontawesome.scss";
+@import"../fontawesome-free-5.15.1-web/scss/solid.scss";
+@import"../fontawesome-free-5.15.1-web/scss/regular.scss";
+@import"var.scss";
+@import"mixins.scss";
+
+:root
+{
+    font-size: calc(1vw/0.2375);
+}
+a, a:visited,a:hover
+{
+    text-decoration: none;
+    color:black;
+}
+body{
+    font-family: "roboto";
+    font-size: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:9;
+    @include loader;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    height:4rem;
+    img
+    {
+        margin:1rem auto auto;
+        width: 45%;
+    }
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-bottom: 4rem;
+}
+#localisation
+{
+    display: flex;
+        margin:auto;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        border-top:0.1rem solid grey;
+        background-color: #e5e5e5;
+        height: 3rem;
+        i
+        {
+            color:grey;
+            padding-right: 1rem;
+        }
+    }
+    input[type="text"]
+    {   
+        background-color: #e5e5e5;
+        color: grey;
+    border:none;
+    width: 8rem;
+}
+form h2
+{
+    margin-top: 2.6rem;
+    width: 70%;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 1;
+}
+form p
+{
+    text-align:center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    width: 90%;
+    margin-bottom:2rem;
+}
+button
+{
+    
+    @include button;
+    @include shadow;
+    @include bckggradient;
+    &:hover
+    {
+        @include shadow(darken( #e5e5e5, 10%));
+        @include bckggradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
+    }
+}
+#fonctionnement
+{
+    margin-top: 2.4rem;
+    width:89%;
+    ol
+    {
+        counter-reset: count;
+        padding-left: 0.5rem;
+        
+    }
+    ol li
+    {
+        position: relative;
+        display:flex;
+        align-items: center;
+        margin:auto;
+        list-style-type: none;
+        font-size:1rem;
+        counter-increment: count;
+        background-color: #f5f5f5;
+        height:4.5rem;
+        margin-top:1.5rem;
+        width:100%;
+        padding-left: 0;
+        border-radius:1.2rem;
+        @include shadow;
+        &:last-of-type
+        {
+            background-color: lighten($primary-color, 35%);
+            & i{
+                color:$primary-color;
+            }
+        }
+    }
+    ol li i
+    {
+        font-size:1.1rem;
+        color:grey;
+        margin:auto 1.5rem auto 2.5rem;
+    }
+    ol li::before
+    {
+        position:absolute;
+        display:flex;
+        align-items: center;
+        left: -0.8rem;
+        content:counter(count);
+        background-color:$primary-color;
+        border-radius: 50%;
+        padding: 0 0.5rem;       
+        color: white;
+    }
+}   
+.newrestaurant::before
+{
+    @extend %newrestaurant
+}
+#restaurants
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-top: 3.4rem;
+    width:100%;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    >*
+    {   
+        width:90%;
+    }
+figure
+{
+    position: relative;
+    margin-top:1.1rem;
+    border-radius:1rem;
+    height:16rem;
+    @include shadow;
+}
+img
+{
+    height:68%;
+    width:100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+figcaption
+{
+    justify-content: space-between;
+    margin:auto; 
+    display:flex;
+}
+.description
+{
+    margin-top:1rem;
+    margin-left: 0.8rem;
+        }
+    }
+    
+    input[type="checkbox"]
+    {
+        display: none;
+    
+        ~ label
+        {
+            display:flex;
+            position: relative;
+            align-items: center;
+        margin-right:1.5rem;
+        font-size:1.5rem;
+        padding:0.1rem;
+        z-index: 12;
+        transition: color 50ms;
+        transition-delay: 500ms;
+        @extend %fa-icon;
+        @extend .fa;
+        &::before{
+            position:absolute;
+            display: flex;
+            margin:auto;
+            -webkit-background-clip: text;
+            background-clip:text;
+            color:transparent;
+            font-size:1.5rem;
+            content:fa-content($fa-var-heart);
+            @include bckggradient($primary-color,$secondary-color);
+            transform: scale(0);
+            transition: 0s; 
+        }
+    }
+    &:checked ~ label::before
+    {        
+        content:fa-content($fa-var-heart);
+        -webkit-background-clip: text;
+        background-clip:text;
+        color:transparent;
+        transform: scale(1);
+        transition: all 500ms;
+    }
+    &:checked ~ label
+    {
+        color:transparent;  
+    }
+}
+footer
+{
+@include footermix
+}
+
