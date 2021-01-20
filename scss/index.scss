@@ -193,15 +193,11 @@ figcaption
         }
     }
     
-    input[type="checkbox"]
+.heart
     {
-        display: none;
-    
-        ~ label
-        {
-            display:flex;
-            position: relative;
-            align-items: center;
+        display:flex;
+        position: relative;
+        align-items: center;
         margin-right:1.5rem;
         font-size:1.5rem;
         padding:0.1rem;
@@ -223,21 +219,17 @@ figcaption
             transform: scale(0);
             transition: 0s; 
         }
+        &:hover::before
+        {        
+            content:fa-content($fa-var-heart);
+            -webkit-background-clip: text;
+            background-clip:text;
+            color:transparent;
+            transform: scale(1);
+            transition: all 500ms;
+            color:transparent;  
+        }
     }
-    &:checked ~ label::before
-    {        
-        content:fa-content($fa-var-heart);
-        -webkit-background-clip: text;
-        background-clip:text;
-        color:transparent;
-        transform: scale(1);
-        transition: all 500ms;
-    }
-    &:checked ~ label
-    {
-        color:transparent;  
-    }
-}
 footer
 {
 @include footermix

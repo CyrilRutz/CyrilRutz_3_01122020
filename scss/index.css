@@ -2,7 +2,7 @@
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, input[type="checkbox"] ~ label,
+.fa, .heart,
 .fas,
 .far,
 .fal,
@@ -17,7 +17,7 @@
   line-height: 1;
 }
 
-input[type="checkbox"] ~ label {
+.heart {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -118,7 +118,7 @@ input[type="checkbox"] ~ label {
   float: right;
 }
 
-.fa.fa-pull-left, input[type="checkbox"] ~ label.fa-pull-left,
+.fa.fa-pull-left, .fa-pull-left.heart,
 .fas.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -126,7 +126,7 @@ input[type="checkbox"] ~ label {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right, input[type="checkbox"] ~ label.fa-pull-right,
+.fa.fa-pull-right, .fa-pull-right.heart,
 .fas.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -6112,7 +6112,7 @@ readers do not read off random characters that represent icons */
   src: url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.woff2") format("woff2"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.woff") format("woff"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.ttf") format("truetype"), url("fontawesome-free-5.15.1-web/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
-.fa, input[type="checkbox"] ~ label,
+.fa, .heart,
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -6503,11 +6503,7 @@ button:hover {
   margin-left: 0.8rem;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] ~ label {
+.heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6525,7 +6521,7 @@ input[type="checkbox"] ~ label {
           transition-delay: 500ms;
 }
 
-input[type="checkbox"] ~ label::before {
+.heart::before {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6543,7 +6539,7 @@ input[type="checkbox"] ~ label::before {
   transition: 0s;
 }
 
-input[type="checkbox"]:checked ~ label::before {
+.heart:hover::before {
   content: "\f004";
   -webkit-background-clip: text;
   background-clip: text;
@@ -6552,9 +6548,6 @@ input[type="checkbox"]:checked ~ label::before {
           transform: scale(1);
   -webkit-transition: all 500ms;
   transition: all 500ms;
-}
-
-input[type="checkbox"]:checked ~ label {
   color: transparent;
 }
 
