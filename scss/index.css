@@ -6250,7 +6250,7 @@ body {
 
 body::before {
   content: "";
-  background: url(images/logo/ohmyfood@2x.svg);
+  background: url(../images/logo/ohmyfood@2x.svg);
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
   overflow: hidden;
